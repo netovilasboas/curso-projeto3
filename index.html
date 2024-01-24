@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastre seu evento</title>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>
+        Crie e compartilhe seu evento.
+      </h1>
+      <p>
+        O primeiro passo, é preencher esse
+        formulário de inscrição.
+      </p>
+    </header>
+    <form id="cad-evento">
+      <fieldset>
+        <legend>Informações do evento</legend>
+
+        <div class="inputs">
+          <label for="tituloEvento">Título do Evento<span>(mínimo 8 caracteres)</span></label>
+          <input type="text" minlength="8" name="tituloEvento">
+        </div>
+
+        <div class="inputs">
+          <label for="linkEvento">Link do evento<span>(comece com https://)</span></label>
+          <input type="url" name="linkEvento">
+        </div>
+
+        <div class="inputs">
+          <label for="whatsappEvento">Whatsapp para contato<span>(somente números)</span></label>
+          <input type="number" name="whatsappEvento">
+        </div>
+
+        <div class="inputs">
+          <label for="infoExtra">Informações extras</label>
+          <textarea name="infoExtra"></textarea>
+        </div>
+
+        <div class="inputs">
+          <label for="categoria">Categoria</label>
+          <select name="categoria">
+            <option value="audPub">Audiência Pública</option>
+            <option value="Curso">Curso</option>
+            <option value="musical">Musical</option>
+          </select>
+        </div>
+
+      </fieldset>
+      <fieldset>
+        <legend>Privacidade</legend>
+        <div class="inputs">
+          <label for="emailAdm">E-mail do administrador<span>(digite um e-mail válido)</span></label>
+          <input type="email" name="emailAdm">
+        </div>
+
+        <div class="inputs">
+          <label for="senhaParticipantes">Senha de acesso para os participantes<span>(mínimo 8
+              caracteres))</span></label>
+          <input type="url" required name="senhaParticipantes">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkPrivado" id="cxCheck">
+          <label for="checkPrivado">Evento privado</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dia e hora</legend>
+        <div class="diaHora">
+          <div class="inputs">
+            <label for="dataEvento">Data</span></label>
+            <input type="date" name="dataEvento">
+          </div>
+          <div class="inputs">
+            <label for="horaInicio">Das</span></label>
+            <input type="time" name="horaInicio">
+          </div>
+          <div class="inputs">
+            <label for="horaFim">Até</span></label>
+            <input type="time" name="horaFim">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <footer>
+      <input  id="botao" type="submit" form="cad-evento" value="Salvar evento">
+    </footer>
+  </div>
+</body>
+
+</html>
